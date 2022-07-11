@@ -59,4 +59,29 @@ public class BikeTest {
 		assertEquals("Car",bike1.getType(),"Expecting Car");
 	}
 	
+	@Test
+	public void getBikeWheels() {
+		Vehicle bike1 = new Motorbike("Motorbike","Honda CBR500R",112,6499,500, 2);
+		assertEquals(2,((Motorbike) bike1).getWheels(),"Expecting 2");
+	}
+	
+	@Test
+	public void setBikeWheels() {
+		Vehicle bike1 = new Motorbike("Motorbike","Honda CBR500R",112,6499,500, 2);
+		((Motorbike) bike1).setWheels(3);
+		assertEquals(3,((Motorbike) bike1).getWheels(),"Expecting 3");
+	}
+	
+	@Test
+	public void getBikeEngine() {
+		Vehicle bike1 = new Motorbike("Motorbike","Honda CBR500R",112,6499,500, 2);
+		assertEquals(500,((Motorbike) bike1).getEngine(),"Expecting 500");
+	}
+	
+	@Test
+	public void setBikeEngine() {
+		Vehicle bike1 = new Motorbike("Motorbike","Honda CBR500R",112,6499,500, 2);
+		((Motorbike) bike1).setEngine(750);
+		assertEquals(750,((Motorbike) bike1).getEngine(),"Expecting 750");
+	}
 }

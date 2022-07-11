@@ -2,8 +2,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
-import com.qa.garage.Car;
-import com.qa.garage.Motorbike;
 import com.qa.garage.Quadbike;
 import com.qa.garage.Vehicle;
 
@@ -59,6 +57,21 @@ public class QuadTest {
 		Vehicle quad1 = new Quadbike("Quadbike","Tesla Cyberquad",10,1590,true);
 		quad1.setType("Car");
 		assertEquals("Car",quad1.getType(),"Expecting Car");
+	}
+	
+	@Test
+	public void getIsElectric() {
+		Vehicle quad1 = new Quadbike("Quadbike","Tesla Cyberquad",10,1590,true);
+		assertEquals(true,((Quadbike) quad1).isElectric(),"Expecting true");
+
+	}
+	
+	@Test
+	public void setIsElectric() {
+		Vehicle quad1 = new Quadbike("Quadbike","Tesla Cyberquad",10,1590,true);
+		((Quadbike) quad1).setElectric(false);
+		assertEquals(false,((Quadbike) quad1).isElectric(),"Expecting false");
+		
 	}
 	
 }
